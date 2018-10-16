@@ -1,0 +1,2 @@
+# StringManipulator
+manipulate strings
