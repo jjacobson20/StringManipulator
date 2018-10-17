@@ -13,18 +13,22 @@ public class StringManipulator
 		String noVowelStr = "";
 		for(int i = 0; i<=inputString.length() - 1; i++)
 		{
+			boolean useAsterisk = false;
+		
 			for(char vowel: vowels)
 			{
+				
 				if (inputString.charAt(i) == vowel)
-				{
-					noVowelStr += "*";
-					i++;
-					break;
-				}
+					useAsterisk = true;
 			}
 			
-			noVowelStr += inputString.charAt(i);
+			if (useAsterisk)
+				noVowelStr += "*";
+			
+			else
+				noVowelStr += inputString.charAt(i);
 		}
+		
 		return noVowelStr;
 	}
 	
